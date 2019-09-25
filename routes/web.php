@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
+    // 記事一覧画面をルートとする。
     return view('welcome');
 });
+
+// 記事詳細画面
+Route::get('/blog/article/detail', 'ArticleViewController@detail');
+
+// 記事作成画面
+Route::get('/blog/article/create', 'ArticleViewController@edit');
+
+// 記事編集画面
+Route::get('/blog/article/edit', 'ArticleViewController@edit');

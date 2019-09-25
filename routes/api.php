@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+ * 記事管理機能
+ */
+
+ //記事作成
+Route::post('/blog/article/create', 'ArticleController@create');
+
+ //記事更新
+Route::post('/blog/article/update', 'ArticleController@update');
