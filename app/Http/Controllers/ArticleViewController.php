@@ -18,6 +18,13 @@ class ArticleViewController extends Controller
         ]);
     }
 
+    public function create(Request $request)
+    {
+        // TODO: 記事作成画面に必要なデータを取得処理を実装する。
+
+        return view('article_create');
+    }
+
     public function edit(Request $request)
     {
         // TODO: 記事編集画面に必要なデータを取得処理を実装する。

@@ -20,7 +20,13 @@ Route::get('/', function () {
 Route::get('/blog/article/detail', 'ArticleViewController@detail');
 
 // 記事作成画面
-Route::get('/blog/article/create', 'ArticleViewController@edit');
+Route::get('/blog/article/create', 'ArticleViewController@create');
 
 // 記事編集画面
 Route::get('/blog/article/edit', 'ArticleViewController@edit');
+
+ //記事作成
+ Route::post('/blog/article/create', 'ArticleController@create');
+
+ //記事更新
+Route::post('/blog/article/update', 'ArticleController@update');
