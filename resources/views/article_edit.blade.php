@@ -21,18 +21,18 @@
         <h1>ここは記事編集画面です。</h1>
         タイトル
         <br>
-        {{$title}}
+        {{$data->title}}
         <br>
         本文
         <br>
-        {{$body}}
+        {{$data->body}}
         <br>
         作成者
         <br>
-        {{$createdBy}}
+        {{$data->created_by}}
         <br>
         更新者
         <br>
-        {{$updatedBy}}
+        {{$data->updated_by}}
     </body>
 </html>

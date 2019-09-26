@@ -2,19 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Article;
+
 class ArticleController extends Controller
 {
-    public function create()
+    public function create(Request $request)
     {
-        // TODO: 作成処理を実装する
-        // 未実装のため、失敗させる
-        return response(500, []);
+        $new_title = $request->input('title');
+        $new_body = $request->input('body');
+
+        $article = new Article();
+        $article->title = $new_title;
+        $article->body = $new_body;
+
+        // FIXME:ログインユーザーの情報を取得する
+        $user = [];
+        $article->created_by = '';
+
+        $article->save();
+
+        // FIXME:記事一覧が作成されたらURLを設定する
+        return redirect('');
     }
 
-    public function update()
+    public function update(Request $request)
     {
-        // TODO: 更新処理を実装する
-        // 未実装のため、失敗させる
-        return response(500, []);
+        $update_target_id = $request->input('article_id');
+        $new_title = $request->input('title');
+        $new_body = $request->input('body');
+
+        $article = Article::where('id', $update_target_id);
+        $article->title = $new_title;
+        $article->body = $new_body;
+
+        // FIXME:ログインユーザーの情報を取得する
+        $user = [];
+        $article->updated_by = '';
+
+        $article->save();
+
+        // FIXME:記事一覧が作成されたらURLを設定する
+        return redirect('');
     }
 }
