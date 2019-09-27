@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Log;
 
 class ArticleViewController extends Controller
 {
+    public function list()
+    {
+        // TODO:一覧取得処理を実装する
+        return view('article_list');
+    }
+
     public function detail(Request $request)
     {
         $article_id = $request->input('article_id');

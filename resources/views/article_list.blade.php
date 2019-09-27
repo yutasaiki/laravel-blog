@@ -17,10 +17,17 @@
     </head>
     <body>
         {{-- 文書構造も宮本さんのデザイン修正が終わったら実装する。それまではデータを表示させるために仮で作成 --}}
-        <h1>ここは記事作成画面です。</h1>
-        タイトルの入力項目を用意します
+        <h1>ここは記事一覧画面です。</h1>
+        {{-- <hr>
+        @foreach($articles as $article)
+        タイトル ： {{$article->title}}
         <br>
-        本文の入力項目を用意します
+        本文 ： {{$article->body}}
         <br>
+        作成者 ： {{$article->created_by}}
+        <br>
+        更新者 ： {{$article->updated_by}}
+        <hr>
+        @endforeach --}}
     </body>
 </html>

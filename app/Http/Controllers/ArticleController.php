@@ -23,7 +23,7 @@ class ArticleController extends Controller
         $article->save();
 
         // FIXME:記事一覧が作成されたらURLを設定する
-        return redirect('');
+        return redirect('/blog/article/list');
     }
 
     public function update(Request $request)
@@ -43,6 +43,6 @@ class ArticleController extends Controller
         $article->save();
 
         // FIXME:記事一覧が作成されたらURLを設定する
-        return redirect('');
+        return redirect('/blog/article/list');
     }
 }

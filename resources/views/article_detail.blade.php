@@ -10,7 +10,7 @@
         <!-- フォントはどうする？-->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles ※スタイルは宮本さんデザインができたら記述する -->
+        <!-- Styles -->
         <style>
         /* スタイルは宮本さんのデザイン修正ができたら実装する */
         </style>
