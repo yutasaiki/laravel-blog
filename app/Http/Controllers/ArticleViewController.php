@@ -10,8 +10,9 @@ class ArticleViewController extends Controller
 {
     public function list()
     {
-        // TODO:一覧取得処理を実装する
-        return view('article_list');
+        $articles = Article::all();
+
+        return view('article_list', ['articles' => $articles]);
     }
 
     public function detail(Request $request)
@@ -21,7 +22,7 @@ class ArticleViewController extends Controller
 
         Log::debug('記事情報 = '.$article);
 
-        return view('article_detail', ['data' => $article]);
+        return view('article_detail', ['article' => $article]);
     }
 
     public function create(Request $request)
@@ -36,6 +37,6 @@ class ArticleViewController extends Controller
 
         Log::debug('記事情報 = '.$article);
 
-        return view('article_edit', ['data' => $article]);
+        return view('article_edit', ['article' => $article]);
     }
 }

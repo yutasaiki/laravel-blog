@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    // 記事一覧画面をルートとする。
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     // 記事一覧画面をルートとする。
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 // 記事一覧画面
+Route::get('/', 'ArticleViewController@list');
 Route::get('/blog/article/list', 'ArticleViewController@list');
 
 // 記事詳細画面

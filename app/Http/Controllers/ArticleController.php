@@ -22,7 +22,6 @@ class ArticleController extends Controller
 
         $article->save();
 
-        // FIXME:記事一覧が作成されたらURLを設定する
         return redirect('/blog/article/list');
     }
 
@@ -32,7 +31,7 @@ class ArticleController extends Controller
         $new_title = $request->input('title');
         $new_body = $request->input('body');
 
-        $article = Article::where('id', $update_target_id);
+        $article = Article::where('id', $update_target_id)->first();
         $article->title = $new_title;
         $article->body = $new_body;
 
@@ -42,7 +41,6 @@ class ArticleController extends Controller
 
         $article->save();
 
-        // FIXME:記事一覧が作成されたらURLを設定する
         return redirect('/blog/article/list');
     }
 }
