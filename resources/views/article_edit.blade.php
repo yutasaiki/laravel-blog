@@ -9,6 +9,7 @@
                 タイトル
                 <br>
                 <input id="title" type="text" name="title" value="{{$article->title}}">
+                <br>
                 本文
                 <br>
                 <textarea name="body" rows="60" cols="100">{{$article->body}}</textarea>

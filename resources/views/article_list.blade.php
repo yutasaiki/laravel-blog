@@ -9,6 +9,7 @@
         タイトル ： {{$article->title}}
         <br>
         本文 ： {{$article->body}}
+        <br>
         <a href="{{ url('/blog/article/detail?article_id='.$article->id) }}"><button type="button">詳細</button></a>
         <a href="{{ url('/blog/article/edit?article_id='.$article->id) }}"><button type="button">編集</button></a>
         <hr>
