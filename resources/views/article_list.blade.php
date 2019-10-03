@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+        <div class="main_img"></div>
         <a href="{{ url('/blog/article/create') }}"><button type="button">記事作成</button></a>
         <div class="background">
                 @foreach($articles as $article)
