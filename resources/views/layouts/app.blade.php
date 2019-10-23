@@ -25,7 +25,7 @@
 
             <header>
                     <div id="branding">
-                        <p>Sample Design</p>
+                        <p class="blog-title">Sample Design</p>
                         <nav>
                             @guest
                             <div id="login-button">

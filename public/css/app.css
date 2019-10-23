@@ -76,7 +76,7 @@
   margin: 0 auto;
   padding-left: 5px;
   font-size: 18px;
-  padding: 20px 10px 10px;
+  padding: 10px;
 }
 
 .line {
@@ -100,19 +100,26 @@
   height: 50px;
   background-color: #313131;
   overflow: hidden;
+  position: relative;
 }
 
-#branding p {
+.blog-title {
   color: #fff;
   font-size: 100%;
   letter-spacing: 10px;
   line-height: 15px;
   padding-left: 3%;
   width: 400px;
+  margin-top: 16px;
+  position:absolute;
+  left: 5px;
 }
 
 #branding nav {
   margin-right: auto;
+  position:absolute;
+  right: 50px;
+  top: 10px;
 }
 
 #login-button {
@@ -124,5 +131,16 @@
   letter-spacing: 10px;
   line-height: 15px;
   margin-right: 10px;
+}
+
+.article-operate {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.article-edit-buttons {
+  position: absolute;
+  top: 7px;
+  right: 30px;
 }
 
