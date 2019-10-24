@@ -43,4 +43,14 @@ class ArticleController extends Controller
 
         return redirect('/blog/article/list');
     }
+
+    public function delete(Request $request)
+    {
+        $delete_target_id = $request->input('article_id');
+        $article = Article::where('id', $delete_target_id)->first();
+        $article->is_deleted = true;
+        $article->save();
+
+        return redirect('/blog/article/list');
+    }
 }

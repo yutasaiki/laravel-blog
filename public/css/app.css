@@ -53,7 +53,6 @@
 }
 
 .card {
-  max-width: 700px;
   margin: 20px auto;
   background-color: #fff;
   padding-bottom: 10px;
@@ -73,7 +72,7 @@
 }
 
 .title-box {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding-left: 5px;
   font-size: 18px;
   padding: 10px;
@@ -135,7 +134,6 @@
 
 .article-operate {
   margin: 20px auto;
-  max-width: 700px;
 }
 
 .article-edit-buttons {
@@ -144,3 +142,6 @@
   right: 30px;
 }
 
+.title-box>a {
+  text-decoration: none;
+}

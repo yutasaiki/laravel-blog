@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
-use Illuminate\Support\Facades\Log;
 
 class ArticleViewController extends Controller
 {
     public function list()
     {
-        $articles = Article::all();
+        $articles = Article::where('is_deleted', false)->orderBy('created_at', 'desc')->get();
 
         return view('article_list', ['articles' => $articles]);
     }
@@ -19,8 +18,6 @@ class ArticleViewController extends Controller
     {
         $article_id = $request->input('article_id');
         $article = Article::where('id', $article_id)->first();
-
-        Log::debug('記事情報 = '.$article);
 
         return view('article_detail', ['article' => $article]);
     }
@@ -34,8 +31,6 @@ class ArticleViewController extends Controller
     {
         $article_id = $request->input('article_id');
         $article = Article::where('id', $article_id)->first();
-
-        Log::debug('記事情報 = '.$article);
 
         return view('article_edit', ['article' => $article]);
     }
