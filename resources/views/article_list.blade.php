@@ -3,9 +3,11 @@
 @section('content')
 <div class="main_img"></div>
 <div class="background">
+    @auth
     <div class="article-operate" style="max-width: 700px;">
         <a href="{{ url('/blog/article/create') }}" class="btn btn-secondary">＋ New Article</a>
     </div>
+    @endauth
     @foreach($articles as $article)
     <div class="card" style="max-width: 700px;">
         <div class="card-container">

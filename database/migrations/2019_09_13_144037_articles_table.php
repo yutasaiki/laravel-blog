@@ -8,8 +8,6 @@ class ArticlesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -19,16 +17,14 @@ class ArticlesTable extends Migration
             $table->longText('body');
             $table->boolean('is_deleted');
             $table->string('created_by');
-            $table->timestamp('created_at')->nullable();
-            $table->string('updated_by');
+            $table->timestamp('created_at');
+            $table->string('updated_by')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

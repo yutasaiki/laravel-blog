@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -15,11 +16,9 @@ class ArticleController extends Controller
         $article = new Article();
         $article->title = $new_title;
         $article->body = $new_body;
-
-        // FIXME:ログインユーザーの情報を取得する
-        $user = [];
-        $article->created_by = '';
-
+        $article->is_deleted = false;
+        $user = Auth::user();
+        $article->created_by = $user->name;
         $article->save();
 
         return redirect('/blog/article/list');
@@ -30,14 +29,11 @@ class ArticleController extends Controller
         $update_target_id = $request->input('article_id');
         $new_title = $request->input('title');
         $new_body = $request->input('body');
-
         $article = Article::where('id', $update_target_id)->first();
         $article->title = $new_title;
         $article->body = $new_body;
-
-        // FIXME:ログインユーザーの情報を取得する
-        $user = [];
-        $article->updated_by = '';
+        $user = Auth::user();
+        $article->updated_by = $user->name;
 
         $article->save();
 
