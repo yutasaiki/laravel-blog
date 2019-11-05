@@ -13,12 +13,12 @@
         <div class="card-container">
             <div class="title-box">
                 <a href="{{ url('/blog/article/detail?article_id='.$article->id) }}">
-                    <p class="title">{{$article->title}}</p>
+                    <p class="title list-title">{{$article->title}}</p>
                 </a>
             </div>
             <div class="line"></div>
             <div class="desc-box">
-                <p class="desc">{{$article->body}}</p>
+                <p class="desc list-body">{{$article->body}}</p>
             </div>
         </div>
     </div>
