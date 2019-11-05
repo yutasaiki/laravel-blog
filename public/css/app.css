@@ -118,7 +118,7 @@
   margin-right: auto;
   position:absolute;
   right: 50px;
-  top: 10px;
+  /* top: 10px; */
 }
 
 #login-button {
@@ -157,4 +157,26 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+}
+
+#nav {
+  list-style: none;
+  overflow: hidden;
+}
+ 
+#nav li {
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 2px;
+}
+ 
+#nav li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
 }
